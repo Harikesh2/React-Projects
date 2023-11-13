@@ -4,21 +4,34 @@ function App() {
   // const [count, setCount] = useState(0)
   const [counter,setCounter] = useState(15);
   // const counter = 15;
-  const addValue = ()=>{
+  const addValue = () =>{
+    if(counter === 15)
+    {
+      return;
+    }
     console.log(counter);
-    
+    setCounter(counter+1);
+  }
 
+  const removeValue = () =>{
+    if(counter === 0)
+    {
+      return;
+    }
+    setCounter(
+      counter-1 
+    )
   }
 
   return (
     <>
     <h1>Hello React</h1>
     <h2>COUNTER: {counter}</h2>
-    <button onclick={addValue}>Add Value{counter}</button>
+    <button onClick={addValue}>Add Value{counter}</button>
     <br /> 
     <br /> 
 
-    <button >Remove Value{counter}</button>
+    <button onClick={removeValue}>Remove Value{counter}</button>
     </>
   )
 }
