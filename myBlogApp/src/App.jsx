@@ -23,6 +23,7 @@ function App() {
   return (
     <>
      <h1> HEllo React</h1>
+     <div>cool boy</div>
     </>
   )
 }
