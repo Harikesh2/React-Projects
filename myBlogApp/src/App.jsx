@@ -25,6 +25,7 @@ function App() {
      <h1> HEllo React</h1>
      <div>cool boy</div>
      <div>cool boy</div>
+     <div>cool boy</div>
     </>
   )
 }
