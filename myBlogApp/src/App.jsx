@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
-import useDispatch from 'react-redux'
+import {useDispatch} from 'react-redux'
 import authservice from './appwrite/auth'
 import {login, logout} from './store/authSlice'
+import Header from './components/Header/Header';
+import Footer from './components/footer/footer';
 
 
 function App() {
@@ -20,14 +22,15 @@ function App() {
     .finally(()=> setLoading(false))
   },[])
 
-  return (
-    <>
-     <h1> HEllo React</h1>
-     <div>cool boy</div>
-     <div>cool boy</div>
-     <div>cool boy</div>
-    </>
-  )
+  return ! loading ? (<div className=' min-h-screen flex flex-wrap content-between bg-gray-400'>
+    <div className=' w-full block'>
+      <Header />
+      <main>
+        {/* <Outlet /> */}
+      </main>
+      <Footer />
+    </div>
+  </div>): null
 }
 
 export default App
