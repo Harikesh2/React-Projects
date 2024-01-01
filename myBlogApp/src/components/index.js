@@ -25,5 +25,6 @@ export {
     Signup,
     Login,
     AuthLayout,
-    Select
+    Select,
+    PostForm,
 }
